@@ -1,0 +1,18 @@
+<h1>Edit Your Grocery item:</h1>
+  <%= form_for @grocery do |f| %>
+
+  <%= label_tag(:item, "Item:") %>
+  <%= f.text_field :item %></br>
+
+  <%= label_tag(:quantity, "Quantity:") %>
+  <%= f.text_field :quantity %></br>
+
+  <%= label_tag(:price, "Price:") %>
+  <%= f.text_field :price %></br>
+
+  <%= label_tag(:description, "Description") %> 
+  <%= f.text_area :description %></br>
+  <%= f.submit "Update", :class => "btn btn-warning" %>
+<% end %>
+
+

@@ -1,0 +1,17 @@
+<h1> Honey, pls buy these! </h1>
+
+<ul>
+	<%@groceries.each do |grocery|%>
+		<li>
+			<%= link_to (grocery.item + " - "+ grocery.description),grocery_path(grocery)%>
+			<%= link_to "edit", edit_grocery_path(grocery), :class => "btn btn-warning btn-xs" %>
+			<%= link_to "delete", grocery, method: :delete, data: { confirm: "You sure?" },:class => "btn btn-danger btn-xs" %>
+		</li>
+	<%end%>
+</ul>
+
+<%= link_to "Create new item", new_grocery_path, :class => "btn btn-success" %>
+
+<br/>
+<br/>
+<p><em>Love, Monika :)</em></p>
